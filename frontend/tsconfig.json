@@ -1,0 +1,35 @@
+{
+	"compilerOptions": {
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"lib": ["DOM", "DOM.Iterable", "ESNext"],
+		"module": "ESNext",
+		"skipLibCheck": true,
+		"target": "ES2020",
+		"types": ["vite/client"],
+
+		/* Bundler mode */
+		"moduleResolution": "bundler",
+		"allowImportingTsExtensions": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"jsx": "react-jsx",
+
+		/* Linting */
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
+
+		/* Config */
+		"baseUrl": "./src",
+		"paths": {
+			"@/*": ["./*"],
+			"@contracts": ["../../backend-src/contracts"],
+			"@schemas": ["../../backend-src/schemas"]
+		}
+	},
+	"include": ["src", "../backend-src/contracts", "../backend-src/schemas"],
+	"references": [{ "path": "./tsconfig.node.json" }]
+}

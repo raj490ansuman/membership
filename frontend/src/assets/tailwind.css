@@ -1,0 +1,322 @@
+/*! purgecss start ignore */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	border-width: 0;
+	border-style: solid;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+p {
+	margin-bottom: 0;
+}
+
+svg {
+	@apply align-baseline;
+}
+
+img {
+	@apply inline-block;
+	image-rendering: -webkit-optimize-contrast !important;
+}
+
+textarea {
+	@apply resize-none;
+}
+
+body {
+	@apply bg-white !important;
+
+	font-family: 'Noto Sans JP', '游ゴシック', '游ゴシック体', YuGothic, 'Yu Gothic', 'メイリオ',
+		Meiryo, 'ＭＳ ゴシック', 'MS Gothic', HiraKakuProN-W3, 'TakaoExゴシック', TakaoExGothic,
+		'MotoyaLCedar', 'Droid Sans Japanese', sans-serif;
+}
+
+input::placeholder,
+input::-webkit-input-placeholder,
+input::-moz-placeholder {
+	line-height: normal !important;
+}
+
+.ant-divider-horizontal.ant-divider-with-text::before,
+.ant-divider-horizontal.ant-divider-with-text::after {
+	top: 0 !important;
+}
+
+.ant-form-item-label
+	> label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::after {
+	@apply inline-block;
+	@apply ml-2;
+	@apply text-white;
+	@apply text-xs;
+	content: '必須';
+	background-color: #ff4d4f;
+	@apply p-1;
+	@apply rounded;
+	@apply leading-none;
+}
+
+.ant-btn-primary {
+	font-weight: bold !important;
+}
+
+.ant-input-clear-icon {
+	font-size: 16px;
+}
+
+.ant-select-clear {
+	font-size: 16px !important;
+	width: 16px !important;
+	height: 16px !important;
+	margin-top: -8px !important;
+}
+
+.ant-picker {
+	font-size: 16px;
+}
+
+.ant-checkbox {
+	top: 0 !important;
+}
+
+.ant-checkbox-wrapper {
+	align-items: center !important;
+}
+
+/* .ant-checkbox-inner {
+  width: 20px !important;
+  height: 20px !important;
+}
+.ant-checkbox-inner::after {
+  height: 11px !important;
+  left: 27% !important;
+  top: 40% !important;
+  width: 6px !important;
+} */
+
+.ant-radio-wrapper {
+	align-items: center !important;
+}
+
+.ant-radio {
+	top: 0 !important;
+}
+
+/* .ant-row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.ant-col:first-child {
+  padding-left: 0 !important;
+}
+
+.ant-col:last-child {
+  padding-right: 0 !important;
+} */
+
+.custom-required-decoration {
+	@apply relative;
+	@apply inline-block;
+	@apply ml-2;
+	@apply text-white;
+	@apply text-xs;
+	background-color: #ff4d4f;
+	@apply p-1;
+	@apply rounded;
+	@apply leading-none;
+}
+
+.hide-timepicker-footer .ant-picker-footer {
+	display: none;
+}
+
+.datepicker-modal {
+	position: fixed !important;
+	z-index: 9999 !important;
+}
+
+.carousel__inner-slide {
+	width: 100% !important;
+}
+
+.carousel__slide-focus-ring {
+	outline: none !important;
+}
+
+.qr-image-wrapper {
+	/* background: rgba(0, 0, 0, 0.5); */
+	position: relative;
+}
+
+.qr-image-wrapper video {
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+	display: block;
+}
+
+.qr-image-wrapper:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	box-shadow: unset !important;
+	background: linear-gradient(to right, #f5222d 4px, transparent 4px) 0 0,
+		linear-gradient(to right, #f5222d 4px, transparent 4px) 0 100%,
+		linear-gradient(to left, #f5222d 4px, transparent 4px) 100% 0,
+		linear-gradient(to left, #f5222d 4px, transparent 4px) 100% 100%,
+		linear-gradient(to bottom, #f5222d 4px, transparent 4px) 0 0,
+		linear-gradient(to bottom, #f5222d 4px, transparent 4px) 100% 0,
+		linear-gradient(to top, #f5222d 4px, transparent 4px) 0 100%,
+		linear-gradient(to top, #f5222d 4px, transparent 4px) 100% 100%;
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	margin: 20px;
+}
+
+.barcode-image-wrapper {
+	/* background: rgba(0, 0, 0, 0.5); */
+	position: relative;
+}
+
+.barcode-image-wrapper video {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	display: block;
+}
+
+.barcode-image-wrapper:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	box-shadow: unset !important;
+	background: linear-gradient(to right, #f5222d 4px, transparent 4px) 0 0,
+		linear-gradient(to right, #f5222d 4px, transparent 4px) 0 100%,
+		linear-gradient(to left, #f5222d 4px, transparent 4px) 100% 0,
+		linear-gradient(to left, #f5222d 4px, transparent 4px) 100% 100%,
+		linear-gradient(to bottom, #f5222d 4px, transparent 4px) 0 0,
+		linear-gradient(to bottom, #f5222d 4px, transparent 4px) 100% 0,
+		linear-gradient(to top, #f5222d 4px, transparent 4px) 0 100%,
+		linear-gradient(to top, #f5222d 4px, transparent 4px) 100% 100%;
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	margin: 20px;
+}
+
+#nprogress .bar {
+	background: theme('colors.primary');
+}
+
+#nprogress .peg {
+	box-shadow: 0 0 10px theme('colors.primary'), 0 0 5px theme('colors.primary');
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+.custom-ol li::marker {
+	content: '※';
+}
+
+.custom-ol li {
+	padding-left: 0.25rem;
+}
+
+.custom-select {
+	background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>")
+		no-repeat;
+	background-position: calc(100% - 0.75rem) center !important;
+	@apply !appearance-none;
+	@apply !py-2;
+	@apply !pr-8;
+	@apply !pl-4;
+	@apply !border;
+	@apply !border-custom-gray;
+	@apply !bg-white;
+	@apply !rounded;
+	@apply !outline-none;
+}
+
+.masked-overflow {
+	/* scroll bar width, for use in mask calculations */
+	--scrollbar-width: 8px;
+
+	/* mask fade distance, for use in mask calculations */
+	--mask-height: 32px;
+
+	/* If content exceeds height of container, overflow! */
+	overflow-y: auto;
+
+	/* Our height limit */
+	height: 400px;
+
+	/* Need to make sure container has bottom space,
+  otherwise content at the bottom is always faded out */
+	padding-bottom: var(--mask-height);
+
+	/* Keep some space between content and scrollbar */
+	padding-right: 20px;
+
+	/* The CSS mask */
+
+	/* The content mask is a linear gradient from top to bottom */
+	--mask-image-content: linear-gradient(
+		to bottom,
+		transparent,
+		black var(--mask-height),
+		black calc(100% - var(--mask-height)),
+		transparent
+	);
+
+	/* Here we scale the content gradient to the width of the container 
+  minus the scrollbar width. The height is the full container height */
+	--mask-size-content: calc(100% - var(--scrollbar-width)) 100%;
+
+	/* The scrollbar mask is a black pixel */
+	--mask-image-scrollbar: linear-gradient(black, black);
+
+	/* The width of our black pixel is the width of the scrollbar.
+  The height is the full container height */
+	--mask-size-scrollbar: var(--scrollbar-width) 100%;
+
+	/* Apply the mask image and mask size variables */
+	mask-image: var(--mask-image-content), var(--mask-image-scrollbar);
+	mask-size: var(--mask-size-content), var(--mask-size-scrollbar);
+
+	/* Position the content gradient in the top left, and the 
+  scroll gradient in the top right */
+	mask-position: 0 0, 100% 0;
+
+	/* We don't repeat our mask images */
+	mask-repeat: no-repeat, no-repeat;
+}
+/*! purgecss end ignore */
+
+.customImage > div:hover {
+	@apply border-[2px] border-solid rounded-md border-green-500;
+}
+
+.custom-cascader img {
+	/* Ensure images do not overflow */
+	max-height: 150px; /* Adjust as necessary */
+	width: 200px;
+	border-radius: 10;
+	padding: 2;
+	contain: content; /* Adjust or remove as necessary */
+	vertical-align: middle; /* Aligns image nicely with text */
+}
